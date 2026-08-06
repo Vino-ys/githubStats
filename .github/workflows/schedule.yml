@@ -19,8 +19,11 @@ jobs:
   update-stats-box:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: bokub/github-stats-box@master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run github-stats-box
+        run: npx github-stats-box
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_STATS }}
