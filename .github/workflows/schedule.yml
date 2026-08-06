@@ -9,18 +9,18 @@ jobs:
   update-productive-box:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: maxheld83/ghaction-productive-box@master
+      - uses: actions/checkout@v4
+      - uses: maxheld83/productive-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_PRODUCTIVE }}
-          TIMEZONE: Asia/Seoul # 시간대 설정
+          TIMEZONE: Asia/Seoul
 
   update-stats-box:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: matchai/waka-box@master # github-stats-box 액션
+      - uses: actions/checkout@v4
+      - uses: matchai/waka-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_STATS }}
