@@ -24,5 +24,4 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           gist_id: ${{ secrets.GIST_ID_STATS }}
-          base: header, activity, community, repositories, metadata
-          plugin_lines: yes
+          base: header
