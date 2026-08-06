@@ -25,5 +25,5 @@ jobs:
       - name: Run github-stats-box
         run: npx github-stats-box
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_PAT: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_STATS }}
