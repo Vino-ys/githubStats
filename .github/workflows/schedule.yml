@@ -20,7 +20,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: densuke/github-stats-box@master
+      - uses: Anmol-Baranwal/Cool-GIFs-For-GitHub@main
+        continue-on-error: true
+      - uses: joshdk/github-allocations-action@v1
+        continue-on-error: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Update Stats
+        run: |
+          npx github-stats-box
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_STATS }}
