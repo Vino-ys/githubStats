@@ -28,3 +28,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID_STATS }}
+          ALL_COMMITS: "true"
+          KLOGS_ACCOUNT: "false"
